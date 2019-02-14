@@ -25,5 +25,14 @@ class UserCenter extends Component {
             url: '/pages/index/index'
         })
     }
+    componentDidMount () {
+        Taro.request({
+            url: 'https://www.easy-mock.com/mock/5a741fe6abb823789968ba2c/pratice/pra',
+            header: {
+              'content-type': 'application/json'
+            }
+          })
+          .then(res => console.log(res.data))
+    }
 }
 export default UserCenter
